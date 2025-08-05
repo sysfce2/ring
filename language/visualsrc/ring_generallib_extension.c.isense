@@ -204,7 +204,7 @@ ring_vm_generallib_nullpointer
 ring_vm_generallib_space
 Type: char *
 cString
-Type: unsigned int
+Type: size_t
 nStrSize
 ring_vm_generallib_ptrcmp
 Type: List *

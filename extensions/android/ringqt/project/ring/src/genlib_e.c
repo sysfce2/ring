@@ -1243,7 +1243,7 @@ void ring_vm_generallib_nullpointer(void *pPointer) { RING_API_RETCPOINTER(NULL,
 
 void ring_vm_generallib_space(void *pPointer) {
 	char *cString;
-	unsigned int nStrSize;
+	size_t nStrSize;
 	if (RING_API_PARACOUNT != 1) {
 		RING_API_ERROR(RING_API_MISS1PARA);
 		return;
@@ -1253,7 +1253,7 @@ void ring_vm_generallib_space(void *pPointer) {
 			RING_API_ERROR(RING_API_BADPARARANGE);
 			return;
 		}
-		nStrSize = (unsigned int)RING_API_GETNUMBER(1);
+		nStrSize = (size_t)RING_API_GETNUMBER(1);
 		cString = (char *)RING_API_MALLOC(nStrSize);
 		memset(cString, ' ', nStrSize);
 		RING_API_RETSTRING2(cString, nStrSize);
